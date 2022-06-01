@@ -1,0 +1,31 @@
+
+@import "../config";
+.contact-container {
+    font-family: $prim-font;
+    max-width: $md;
+    width: 80%;
+    padding: 3em 0;
+    margin: 0 auto;
+    h1, h3 {
+        text-align: center;
+    }
+    h3 {
+        background: rgba(239, 56, 36, 0.15);
+        color: $prim;
+        width: fit-content;
+        margin: 1em auto;
+        padding:.3em 1.5em;
+        border-radius: 40px;
+    }
+    .form-group {
+        margin: 1em 0;
+        input, textarea {
+            @include form-control;
+        }
+    }
+    .btn {
+        @include btn($prim, $white);
+        padding: .5em 2.5em;
+        cursor: pointer;
+    }
+}

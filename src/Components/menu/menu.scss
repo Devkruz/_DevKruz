@@ -1,0 +1,155 @@
+@import "../config";
+
+$less-white: rgba(255, 255, 255, 0.5);
+$white: #ffffff;
+$prim-light:#0F8B8D;
+$prim-dark: #0F7E80;
+$bg-dark: #343a40;
+$bg-light: #5D5B5B;
+
+
+.menu-wrapper {
+     width: 100%;
+     height: 10vh;
+     position:absolute;
+     z-index: 12;
+     background: rgba($bg-light, .8);
+     overflow:hidden;
+     transition: all .5s ease;
+     
+
+    .menu-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+     //    display: flex;
+     //    justify-content: flex-start;
+     //    align-items: center;
+         @include flex(row,flex-start,center);
+
+        .menu-btn {
+             position: absolute;
+             top: 5vh;
+             width: 30px;
+             height: 30px;
+             color:$less-white;
+             border: 1px solid $less-white;
+             transform: translateY(-50%);
+             right: 50px;
+             display: none;
+        };
+    };
+
+    .logo {
+         width: 350px;
+         min-height: 10vh;
+         display: flex;
+         font-size:.8em;
+         justify-content: center;
+         align-items: center;
+         color:$white;
+    };
+
+     .menu {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          list-style: none;
+          a {
+              color:$less-white;
+              text-decoration: none;
+              margin: 0em 2em 0 0;
+              display: block
+
+          };
+          a.active {
+                color:$white;
+          }
+          a:hover {
+                color:$white;
+          }
+     };
+};
+
+
+
+// media Screan less than 700px
+@media (max-width:700px) {
+
+     
+    .menu-wrapper .menu-container {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .menu-btn {
+                  display: block;
+                  @include flex(row,center,center);
+                  overflow: hidden;
+                 
+                  div {
+                       width: fit-content;
+                       @include flex(column,space-between,center);
+                    //    background: black;
+                       height: 60px;
+                       transform:translateY(-40%);
+                       transition: all .5s ease;
+                  }
+                  .btn-open {
+                    transform:translateY(35%);
+                    transition: all .5s ease;
+                  }
+                  
+            };
+    };
+
+    .menu-wrapper .menu {
+           flex-direction: column;
+           width: 300px;
+           margin-right: 0;
+           padding:1em 0;
+           justify-content: space-between;
+           align-items: center;
+            .menu-items {
+                 padding: 1em;
+            };
+
+    };
+    
+};
+// media Screan less than 700px
+
+
+
+
+// media screan less than 320px
+@media (max-width:320px) {
+     .menu-wrapper .menu {
+          width: 150px;
+     };
+     .menu-wrapper .logo {
+          width: 150px;
+     };
+};
+// media screan less than 320px
+
+
+
+//global style
+.menu-fixed {
+     
+     position: fixed;
+     background: rgba($bg-dark, .9);
+     transition: position 1s ease;
+     transition: background 1s ease;
+     transition: position 5s ease;
+     transition: height 1s ease;
+};
+
+.menu-open {
+     height: 60vh;
+     transition: all .5s ease;
+};
+
+

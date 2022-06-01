@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-wrapper {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+.welcome-wrapper .welcome-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-wrapper .welcome-container .icon {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  cursor: pointer;
+}
+.welcome-wrapper .welcome-container .name {
+  margin: 0.5em 0;
+  font-size: 2em;
+}
+.welcome-wrapper .welcome-container .name h2 {
+  font-weight: lighter;
+}
+.welcome-wrapper .welcome-container .name h2 span {
+  color: aqua;
+  font-weight: 600;
+}
+.welcome-wrapper .welcome-container .welcome {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.welcome-wrapper .welcome-container .title {
+  padding: 0.5em 1.5em;
+  background: rgba(15, 139, 141, 0.5);
+  color: aqua;
+  border-radius: 25px;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 420px) {
+  .welcome-wrapper .welcome-container .name h2 {
+    font-size: 1em;
+  }
+}/*# sourceMappingURL=welcome.css.map */

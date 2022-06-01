@@ -1,0 +1,55 @@
+
+@import "../config";
+
+.footer-wrapper {
+    font-family:$prim-font ;
+     background: $bg;
+     width: 100%;
+     height: fit-content;
+     color:$white;
+     .footer-container {
+         max-width: $lg;
+        padding:2em;
+         height:100%;
+         margin:auto;
+         h1 {
+             text-align: center;
+             color:$bg-prim;
+             margin-bottom: 1.5em;
+         }
+         .footer {
+             width: 100%;
+             display: grid;
+             grid-template-columns: 1fr;
+             gap:2em;
+             a, h3 {
+                  text-decoration: none;
+                  padding:.5em 0em;
+                  color:$light;
+                  a:hover {
+                      border-bottom: 1px solid $light; 
+                  }
+             }
+
+             .find-me, .follow-me, .contact-me {
+                    margin-bottom: 2em;
+                    h5 {
+                        margin-bottom: 1em;
+                        padding-bottom:.3em;
+                        letter-spacing: 3px;
+                        width: fit-content;
+                        border-bottom: 1px solid $light
+                    }
+             }
+
+         }
+     }
+};
+
+
+@media (min-width:$md) {
+    .footer-wrapper .footer-container .footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}

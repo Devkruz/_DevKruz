@@ -1,0 +1,77 @@
+@import "../config";
+$white: #ffffff;
+$prim-light:#0F8B8D;
+$prim-dark: #0F7E80;
+$bg-dark: #001019;
+$bg-light: #5D5B5B;
+$prim: #EF3724; 
+
+.skills-wrapper {
+    font-family: 'Quicksand', sans-serif;
+    color:$white;
+    background: $bg-dark;
+     width: 100%;
+     height: fit-content;
+    
+     .skills-container {
+         margin:auto;
+        //  padding:1em;
+         width: 85%;
+         height: 85%;             
+             @include flex(column,flex-start,center);
+             padding-top:2em;
+             .frontend-container, .language-container {
+                   @include flex(column, flex-start, center);
+                    width: 100%;
+ 
+
+             };
+           
+            .language, .frontend {
+                width: 100%;
+                // @include flex(column, flex-start, center);
+                margin: 4em 0;
+               
+                .center {
+                    @include flex(column, center, center);
+
+                    margin:0.5em;
+                    h3 {
+                        margin-top:1em;
+                        letter-spacing:2px;
+                        text-align: center;
+                    };
+                };
+                color:$prim;
+                margin-top: 2em;
+                display: grid;
+                grid-template-columns:repeat(2, 1fr);
+                // grid-template-rows: 10em;
+        
+            };
+     };
+};
+
+@media (max-width:950px) {
+    .skills-wrapper {
+        margin-top: 5em;
+    };
+};
+
+@media (min-width:500px) {
+    .skills-wrapper  .skills-container .frontend {
+        grid-template-columns:repeat(3, 1fr);
+
+    };
+};
+
+@media (min-width:900px) {
+    .skills-wrapper  .skills-container  {
+        @include flex(row,center,flex-start);
+        // width: 50%;
+
+    };
+};
+// @media (max-width:470px) {
+      
+// }
