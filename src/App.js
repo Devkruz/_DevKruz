@@ -22,7 +22,7 @@ function App() {
         <Certification/>
        {/* Certification Section */}
        {/* Work Section */}
-        {/* <Work/> */}
+        <Work/>
        {/* Work Section */}
        {/* Contact Section */}
         <Contact/>

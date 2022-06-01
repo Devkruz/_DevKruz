@@ -44,6 +44,11 @@ $xxl: 1400px;
     $light: #f8f9fa;
     $dark: #151515;
 
+    * {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+    }
 
     //mixin
     @mixin form-control {

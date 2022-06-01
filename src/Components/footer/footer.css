@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .footer-wrapper {
   font-family: "Quicksand", sans-serif;
   background: #171925;

@@ -6,8 +6,8 @@
   
 
    return (
-     <div id="work" className="work-wrapper">
-        <div className="work-container">
+     
+        <div id ="work" className="work-container">
           
              <h3 className="portfolio">Portfolio</h3>
              <h1 className="heading">See My Works</h1>
@@ -40,7 +40,7 @@
               
              </div>
         </div>
-     </div>
+     
    )
  }
  
